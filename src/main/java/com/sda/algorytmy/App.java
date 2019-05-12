@@ -11,12 +11,15 @@ public class App {
         System.out.println("Podaj b: ");
         int b = scanner.nextInt();
         System.out.println(nwd(a, b));
+        System.out.println(nwdWersja(a, b));
+
     }
 
 
     public static int nwd(int a, int b) {
         if (a == b) {
             return a;
+
         } else if (a > b) {
             while (a > b) {
                 a = a - b;
@@ -29,6 +32,20 @@ public class App {
             }
             return b;
         }
+    }
+
+    public static int nwdWersja (int a, int b){
+        int licznik = 0;
+        while (a != b){
+            if(a > b){
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+
+        } licznik++;
+        return a;
+
     }
 }
 
